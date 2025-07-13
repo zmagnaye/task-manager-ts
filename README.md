@@ -31,13 +31,13 @@ Users can create, view, edit, and delete tasks with type-safe code and global st
 
 ## Project Structure
 
-src/
-src/components/          # Reusable UI components
-src/context/             # React Context API provider for tasks
-src/pages/               # Route-based pages (Dashboard, CreateTask, EditTask, TaskDetails)
-src/types/               # TypeScript type definitions
-src/App.tsx              # Main app with routing and Auth0 provider
-src/main.tsx             # Entry point, renders App
+- src/
+- src/components/          # Reusable UI components
+- src/context/             # React Context API provider for tasks
+- src/pages/               # Route-based pages (Dashboard, CreateTask, EditTask, TaskDetails)
+- src/types/               # TypeScript type definitions
+- src/App.tsx              # Main app with routing and Auth0 provider
+- src/main.tsx             # Entry point, renders App
 
 ---
 
