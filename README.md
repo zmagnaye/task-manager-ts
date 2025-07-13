@@ -1,7 +1,7 @@
 # Task Manager App (React + TypeScript + Auth0)
 
 A simple task management application built with React, TypeScript, and Auth0 authentication.  
-Users can create, view, edit, and delete tasks with type-safe code and global state management using Context API. Tasks are persisted in the browser’s LocalStorage.
+Users can create, view, edit, and delete tasks with type-safe code and global state management using Context API.
 
 ---
 
