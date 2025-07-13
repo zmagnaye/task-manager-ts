@@ -1,6 +1,6 @@
 import { useTaskContext } from "../context/TaskContext";
 import { useState } from "react";
-import { Task } from "../models/Task";
+import type { Task } from "../models/Task";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 
@@ -28,15 +28,15 @@ const CreateTask = () => {
     };
 
     return (
-        <div className="container mt=4">
+        <div className="container mt-4">
             <h2> Create New Task </h2>
-            {error && <div className="aler alert-danger">{error}</div>}
+            {error && <div className="alert alert-danger">{error}</div>}
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label className="form-label"> Title </label>
                     <input type = "text" className = "form-control" value = {title} onChange = {(e) => setTitle(e.target.value)}/>
                 </div>
-                <div>
+                <div className="mb-3">
                     <label className="form-label"> Description </label>
                     <textarea className="form-control" value = {description} onChange={(e) => setDescription(e.target.value)}/>
                 </div>

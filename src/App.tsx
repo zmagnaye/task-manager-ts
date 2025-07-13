@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import Dashboard from './pages/Dashboard'
 import CreateTask from './pages/CreateTask'
 import EditTask from './pages/EditTask'
+import TaskDetails from './pages/TaskDetails'
 import { TaskProvider } from './context/TaskContext'
 import './App.css'
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/create" element={isAuthenticated ? <CreateTask/> : <Navigate to = "/login"/>}/>
           <Route path="/login" element={<div className='p-4'> <h2> Please Log In </h2> </div>}/>
           <Route path="/edit/:id" element={isAuthenticated ? <EditTask/> : <Navigate to = "/login"/>}/>
+          <Route path="/details/:id" element={isAuthenticated ? <TaskDetails/> : <Navigate to = "/login"/>}/>
         </Routes>
       </div>
     </TaskProvider>

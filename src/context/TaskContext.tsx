@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
-import { Task } from "../models/Task";
+import type { Task } from "../models/Task";
 
 interface TaskContextType {
     tasks: Task[];
