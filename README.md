@@ -1,69 +1,63 @@
-# React + TypeScript + Vite
+# Task Manager App (React + TypeScript + Auth0)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple task management application built with React, TypeScript, and Auth0 authentication.  
+Users can create, view, edit, and delete tasks with type-safe code and global state management using Context API. Tasks are persisted in the browser’s LocalStorage.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- User authentication via **Auth0** 
+- Create, view, edit, and delete tasks 
+- Form validation for creating and editing tasks 
+- Protected routes using **React Router DOM** 
+- Global state management using **React Context API** 
+- Responsive UI styled with **Bootstrap 5** 
+- Authentication guard that redirects unauthenticated users
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 18**
+- **TypeScript**
+- **React Router DOM**
+- **Auth0 React SDK**
+- **Context API**
+- **Bootstrap 5**
+- **uuid** for unique task IDs
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+src/
+├── components/          # Reusable UI components
+├── context/             # React Context API provider for tasks
+├── pages/               # Route-based pages (Dashboard, CreateTask, EditTask, TaskDetails)
+├── types/               # TypeScript type definitions
+├── App.tsx              # Main app with routing and Auth0 provider
+├── main.tsx             # Entry point, renders App
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## Usage
+
+- Register or log in with Auth0 on the app.
+- Create new tasks via the "Create Task" page.
+- Edit or delete existing tasks.
+- View existing tasks on the dashboard.
+- View task details on the details page.
+
+---
+
+## Authentication
+
+This project uses Auth0 for authentication. Users must be logged in to access the dashboard and task pages. Public routes redirect to the login page if the user is not authenticated.
+
+---
+
+## Author
+
+Zari Justine Magnaye
+Built as part of a TypeScript + React learning module.
